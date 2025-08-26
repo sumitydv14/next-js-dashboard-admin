@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #2c2c2c;
+    --bgSec: #4c4c4c;
+    --text: #ffffff;
+    --textSec: rgb(255,255,255);
+}
+
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.product-form-container, .user-container {
+    height: calc(100vh - 200px);
+    overflow: hidden;
+    overflow-y: auto;
+}
