@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-let isConnected = false; // ✅ global variable to persist across hot reloads
+let isConnected = false;
 
 export const connectToDB = async () => {
   if (isConnected) {
@@ -11,7 +11,7 @@ export const connectToDB = async () => {
   try {
     const db = await mongoose.connect(process.env.MONGO);
 
-    isConnected = db.connections[0].readyState; // ✅ correct
+    isConnected = db.connections[0].readyState;
     console.log("✅ MongoDB connected");
   } catch (error) {
     console.error("❌ MongoDB connection error:", error);

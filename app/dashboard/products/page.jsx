@@ -11,7 +11,6 @@ export default async function ProductsPage() {
 
   return (
     <div className="bg-gray-900 text-white p-6 rounded-lg">
-      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">Products</h1>
         <Link href="/dashboard/products/add" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">
@@ -19,7 +18,6 @@ export default async function ProductsPage() {
         </Link>
       </div>
 
-      {/* Table */}
       <div className="overflow-x-auto bg-gray-800 rounded-lg shadow">
         <table className="w-full text-sm text-left">
           <thead className="text-xs uppercase bg-gray-700 text-gray-400">
@@ -51,6 +49,7 @@ export default async function ProductsPage() {
                       View
                     </Link>
                     <form action={deleteProduct}>
+                        <input type="hidden" name="id" value={product.id} />
                        <button className="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm">
                            Delete
                        </button>
